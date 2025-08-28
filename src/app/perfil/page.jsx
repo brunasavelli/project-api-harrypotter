@@ -6,8 +6,9 @@ import Link from 'next/link';
 export default function Perfil() {
 
     return (
-        <div className="min-h-screen bg-blue-200 p-20 items-center justify-center flex bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images6.alphacoders.com/130/thumb-1920-1302546.jpg')" }}>
+        <div 
+            className="min-h-screen bg-blue-200 p-20 items-center justify-center flex bg-[url('https://images6.alphacoders.com/130/thumb-1920-1302546.jpg')] bg-fixed bg-cover bg-center h-96 w-full"
+        >
             <div
                 className='justify-center items-center p-6 rounded-1g shadow-md rounded-lg flex flex-col space-y-4 text-center w-200'
                 style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }} >
