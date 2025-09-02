@@ -58,6 +58,7 @@ export default function Api() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {bruxos.map((bruxos) => (
+          
           <div
             key={bruxos.id}
             className="bg-white/50 rounded-1g shadow-md rounded-lg flex flex-row justify-center items-center p-6 space-x-20 transition-transform duration-300 hover:scale-105 active:scale-95"
