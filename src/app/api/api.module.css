@@ -10,42 +10,6 @@
     }
 }
 
-@keyframes glow {
-
-    0%,
-    100% {
-        opacity: 0.6;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-}
-
 .hpTitle {
     font-size: 2.8rem;
     font-weight: 900;
@@ -54,17 +18,33 @@
     animation: float 3s ease-in-out infinite;
 }
 
-.titleGlow {
-    background: linear-gradient(90deg, #e2c626 0%, rgb(198, 140, 31) 25%, rgb(137, 71, 20), #894714 75%, #e5e6be 100%);
-    background-size: 300% 100%;
+.hpTitle span {
+    background: linear-gradient(90deg, 
+        #4a5568 0%, 
+        #4a5568 25%, 
+        #ffffff 50%, 
+        #4a5568 75%, 
+        #4a5568 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0 0;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 30px #c2c264;
-    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+    -webkit-text-fill-color: transparent;
+    animation: shineText 4s ease-in-out infinite;
 }
 
 .font-wizard {
     font-family: var(--font-wizard);
     font-weight: 400;
 }
+
+@keyframes shineText {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+

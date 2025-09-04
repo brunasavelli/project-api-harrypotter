@@ -26,10 +26,10 @@ export default function Api() {
   };
 
   return (
-    <div className="bg-[url('https://images6.alphacoders.com/130/thumb-1920-1302546.jpg')] bg-fixed bg-cover bg-center min-h-screen p-10 flex flex-col justify-center">
+    <div className="bg-[url('https://wallpapercave.com/wp/wp9021982.jpg')] bg-fixed bg-cover bg-center min-h-screen p-10 flex flex-col justify-center">
       <div className="max-w-4x1 mx-auto">
         <h1 className={styles.hpTitle}>
-          <span className="font-wizard">Bruxos de Harry Potter</span>
+          <span className="font-wizard text-gray-700">Bruxos de Harry Potter</span>
         </h1>
 
         <div className="text-center mb-8">
@@ -37,7 +37,7 @@ export default function Api() {
             <button
               onClick={buscarBruxos}
               disable={loading}
-              className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400 font-semibold"
+              className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400 font-semibold cursor-pointer transition-colors"
             >
               {loading ? "Carregando ... " : "🔍 Buscar Bruxos"}
             </button>
@@ -45,12 +45,12 @@ export default function Api() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {bruxos.map((bruxos) => (
           
           <div
             key={bruxos.id}
-            className="bg-white/50 rounded-1g shadow-md rounded-lg flex flex-col-reverse justify-center items-center transition-transform duration-300 hover:scale-105 active:scale-95 p-6"
+            className="bg-white/50 rounded-1g shadow-md rounded-lg flex flex-col-reverse justify-center items-center transition-transform duration-300 hover:scale-105 active:scale-95 p-6 w-70"
           >
             <div className="w-full p-4 flex flex-col justify-center items-center">
               <h3 className="font-bold text-1g text-gray-800 text-2xl w-ful items-center justify-center flex">
