@@ -1,0 +1,35 @@
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hpTitle {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin: 8px 0;
+    letter-spacing: -0.8px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hpTitle span {
+    background: linear-gradient(90deg, 
+        #4a5568 0%, 
+        #4a5568 25%, 
+        #ffffff 50%, 
+        #4a5568 75%, 
+        #4a5568 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shineText 4s ease-in-out infinite;
+}

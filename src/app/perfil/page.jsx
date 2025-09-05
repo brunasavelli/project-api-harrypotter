@@ -7,38 +7,50 @@ export default function Perfil() {
 
     return (
         <div 
-            className="min-h-screen bg-blue-200 p-20 items-center justify-center flex bg-[url('https://images6.alphacoders.com/130/thumb-1920-1302546.jpg')] bg-fixed bg-cover bg-center h-96 w-full"
+            className="min-h-screen flex items-center justify-center bg-[url('https://wallpapercave.com/wp/wp9021982.jpg')] bg-fixed bg-cover bg-center px-4 py-10"
         >
             <div
-                className='justify-center items-center p-6 rounded-1g shadow-md rounded-lg flex flex-col space-y-4 text-center w-200'
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }} >
-                <img src="https://avatars.githubusercontent.com/u/158209933?v=4" alt="Foto de Bruna Savelli"
-                    className='w-50 rounded-full shadow-2xl' />
-                <h1 className="text-3xl font-bold text-blue-900 mb-4">
+                className='backdrop-blur-lg bg-white/30 border border-white/40 shadow-2xl rounded-3xl flex flex-col items-center space-y-6 text-center max-w-2xl w-full px-10 py-10 animate-fade-in'
+            >
+                <div className="relative flex justify-center items-center mb-2">
+                    <img src="https://avatars.githubusercontent.com/u/158209933?v=4" alt="Foto de Bruna Savelli"
+                        className='w-36 h-36 rounded-full border-4 border-orange-700 shadow-xl transition-transform duration-300 hover:scale-105' />
+                    <span className="absolute bottom-2 right-2 bg-gradient-to-r from-yellow-600 to-red-900 w-6 h-6 rounded-full border-2 border-white animate-pulse"></span>
+                </div>
+                <h1 className="text-4xl font-extrabold mb-2 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-900 bg-clip-text text-transparent drop-shadow-lg">
                     Sobre a Autora
                 </h1>
-                <p className="text-lg text-gray-700 mb-4">
-                    Olá, visitante! Meu nome é <span className="font-semibold text-blue-800">Bruna Savelli</span>.
+                <p className="text-lg text-gray-800 mb-2">
+                    Olá, visitante! Meu nome é <span className="font-semibold text-red-900">Bruna Savelli</span>.<br/>
                     Este site foi criado para armazenar e apresentar meu projeto de TCC sobre personagens de Harry Potter!
                 </p>
-                <p className="text-md text-gray-600 mb-4 text-align justify-center">
+                <p className="text-md text-gray-800 mb-4 text-justify">
                     Aqui você encontrará informações relacionadas aos personagens principais, secundários e figurantes, reunidos especialmente para o desenvolvimento do meu Trabalho de Conclusão de Curso. Fique à vontade para explorar e acompanhar o andamento do projeto!
                 </p>
-                <div className='flex flex-row justify-evenly items-center'>
-                    <button className='mt-6 gap-6 flex flex-row'>
-                        <Link
-                            href="/sobre"
-                            className='bg-blue-800 text-white font-bold px-6 py-3 rounded-lg shadow  hover:bg-blue-900'>
-                            SAIBA MAIS
-                        </Link>
-                        <Link
-                            href="/api"
-                            className='bg-blue-800 text-white font-bold px-6 py-3 rounded-lg shadow  hover:bg-blue-900'>
-                            API
-                        </Link>
-                    </button>
+                <div className='flex flex-row justify-center items-center gap-4 mt-4'>
+                    <Link
+                        href="/sobre"
+                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400'
+                    >
+                        SAIBA MAIS
+                    </Link>
+                    <Link
+                        href="/api"
+                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400'
+                    >
+                        API
+                    </Link>
                 </div>
             </div>
+            <style>{`
+                @keyframes fade-in {
+                  from { opacity: 0; transform: translateY(20px); }
+                  to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                  animation: fade-in 0.7s ease both;
+                }
+            `}</style>
         </div>
     )
 }

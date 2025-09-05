@@ -37,7 +37,7 @@ export default function Api() {
             <button
               onClick={buscarBruxos}
               disable={loading}
-              className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400 font-semibold cursor-pointer transition-colors"
+              className="bg-gradient-to-r from-yellow-600 to-red-900 text-white px-8 py-3 rounded-lg hover:from-yellow-700 hover:to-red-950 disabled:bg-gray-400 font-semibold cursor-pointer transition-colors"
             >
               {loading ? "Carregando ... " : "🔍 Buscar Bruxos"}
             </button>
