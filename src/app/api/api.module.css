@@ -16,6 +16,7 @@
     margin: 8px 0;
     letter-spacing: -0.8px;
     animation: float 3s ease-in-out infinite;
+    text-align: center;
 }
 
 .hpTitle span {
