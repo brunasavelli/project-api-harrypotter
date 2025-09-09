@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Header from '../components/Header/page';
 
 export default function Perfil() {
 
@@ -9,6 +10,7 @@ export default function Perfil() {
         <div 
             className="min-h-screen flex items-center justify-center bg-[url('https://wallpapercave.com/wp/wp9021982.jpg')] bg-fixed bg-cover bg-center px-4 py-10"
         >
+            <Header />
             <div
                 className='backdrop-blur-lg bg-white/30 border border-white/40 shadow-2xl rounded-3xl flex flex-col items-center space-y-6 text-center max-w-2xl w-full px-10 py-10 animate-fade-in'
             >
@@ -30,27 +32,18 @@ export default function Perfil() {
                 <div className='flex flex-row justify-center items-center gap-4 mt-4'>
                     <Link
                         href="/sobre"
-                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400'
+                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-red-900'
                     >
                         SAIBA MAIS
                     </Link>
                     <Link
                         href="/api"
-                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400'
+                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-red-900'
                     >
                         API
                     </Link>
                 </div>
             </div>
-            <style>{`
-                @keyframes fade-in {
-                  from { opacity: 0; transform: translateY(20px); }
-                  to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-fade-in {
-                  animation: fade-in 0.7s ease both;
-                }
-            `}</style>
         </div>
     )
 }
