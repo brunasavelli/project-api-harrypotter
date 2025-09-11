@@ -6,9 +6,25 @@ import Header from "../components/Header/page";
 
 export default function Sobre() {
     return (
-        <div className="bg-[url('https://wallpapercave.com/wp/wp9021982.jpg')] bg-fixed bg-cover bg-center min-h-screen p-10 flex flex-col justify-center items-center text-white">
+        <div className="bg-[url('https://i.pinimg.com/736x/ef/94/95/ef949502ce5be5e2939e08215dc09588.jpg')] bg-fixed bg-cover bg-center min-h-screen flex flex-col justify-center items-center text-white">
             <Header />
-            <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src="/images/hpTitle.png" alt="Título de Harry Potter" className={styles.hpImageTitle} />
+            </div>
+            <div className={styles.textContainer}>
+                <h3>Essa API armazena dados dos personagens de Harry Potter, permitindo acessar informações detalhadas sobre bruxos, bruxas e outros personagens do universo criado por J.K. Rowling.</h3>
+            </div>
+            <div className={styles.main}>
+                <div className={styles.trioImage}>
+                    <img src="/images/trioDeOuro.png" alt="" />
+                </div>
+                <div className={styles.trioDescription}>
+                    <p>O Trio de Ouro — Harry, Rony e Hermione — é a prova de que a verdadeira magia está na amizade.
+                        Harry traz a coragem, Rony a lealdade e Hermione a sabedoria.
+                        Juntos, transformaram trevas em esperança e mostraram que nenhum destino é maior do que a força de três corações unidos.</p>
+                </div>
+            </div>
+            {/* <div className={styles.container}>
                 <h2 className="text-4xl font-bold mb-6">Bem-vindo ao Projeto Harry Potter API</h2>
                 <div className={styles.content}>
                     <p className={styles.text}>
@@ -28,7 +44,7 @@ export default function Sobre() {
                         VEJA A API
                     </Link>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

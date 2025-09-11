@@ -1,39 +1,3 @@
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.hpTitle {
-    font-size: 2.8rem;
-    font-weight: 900;
-    margin: 8px 0;
-    letter-spacing: -0.8px;
-    animation: float 3s ease-in-out infinite;
-}
-
-.hpTitle span {
-    background: linear-gradient(90deg, 
-        #4a5568 0%, 
-        #4a5568 25%, 
-        #ffffff 50%, 
-        #4a5568 75%, 
-        #4a5568 100%
-    );
-    background-size: 200% 100%;
-    background-position: 0 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shineText 4s ease-in-out infinite;
-}
-
 .navList {
     display: flex;
     flex-direction: row;
@@ -72,4 +36,30 @@
 .navItem:hover {
     color: #767998;
     cursor: pointer;
+}
+
+.logo {
+    height: 72px;
+    max-height: 80px;
+    width: auto;
+        height: 56px;
+        object-fit: contain;
+        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+        opacity: 0;
+        animation: logo-fade-in 1s 0.2s forwards;
+    }
+
+    .logo:hover {
+        transform: scale(1.08) rotate(-2deg);
+    }
+
+    @keyframes logo-fade-in {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+}
+
+.header {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
 }

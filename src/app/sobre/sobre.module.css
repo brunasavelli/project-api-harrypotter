@@ -1,102 +1,52 @@
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
 }
 
-.hpTitle {
-    font-size: 2.8rem;
-    font-weight: 900;
-    margin: 8px 0;
-    letter-spacing: -0.8px;
+.hpImageTitle {
+    height: 300px;
+    width: auto;
     animation: float 3s ease-in-out infinite;
 }
 
-.hpTitle span {
-    background: linear-gradient(90deg, 
-        #4a5568 0%, 
-        #4a5568 25%, 
-        #ffffff 50%, 
-        #4a5568 75%, 
-        #4a5568 100%
-    );
-    background-size: 200% 100%;
-    background-position: 0 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shineText 4s ease-in-out infinite;
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
 }
 
-.navList {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0 60px;
-    align-items: center;
-}
-
-.navItem {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-    position: relative;
-}
-
-.navItem::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    width: 100%;
-    height: 2px;
-    background: #767998;
-    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-    border-radius: 2px;
-}
-
-.navItem:hover::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
-.navItem:hover {
-    color: #767998;
-    cursor: pointer;
-}
-
-.container {
-    background-color: rgba(0, 0, 0, 0.3);
+.textContainer {
+    background: rgba(0, 0, 0, 0.267);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    max-width: 800px;
+    margin-top: 50px;
+    max-width: 80%;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.text {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #f0f0f0;
-    margin-bottom: 20px;
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c3135;
+    color: white;
+    width: 100%;
+    mask: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+    padding-top: 150px;
+    gap: 50px;
+}
+
+.trioDescription {
+    max-width: 500px;
+    margin-left: 20px;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }

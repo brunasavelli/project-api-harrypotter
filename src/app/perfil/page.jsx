@@ -12,7 +12,7 @@ export default function Perfil() {
         >
             <Header />
             <div
-                className='backdrop-blur-lg bg-white/30 border border-white/40 shadow-2xl rounded-3xl flex flex-col items-center space-y-6 text-center max-w-2xl w-full px-10 py-10 animate-fade-in'
+                className='backdrop-blur-lg bg-white/30 border border-white/40 shadow-2xl rounded-3xl flex flex-col items-center space-y-6 text-center max-w-2xl w-full px-10 py-10 animate-fade-in mt-12'
             >
                 <div className="relative flex justify-center items-center mb-2">
                     <img src="https://avatars.githubusercontent.com/u/158209933?v=4" alt="Foto de Bruna Savelli"
