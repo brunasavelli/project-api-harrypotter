@@ -20,19 +20,36 @@ export default function Sobre() {
                 </div>
             </div>
             <div className={styles.mainBottom}>
-                <div className={styles.box}>
-                    <img src="/images/wizardingWorld.png" alt="Mundo Bruxo"  className={styles.icon}/>
-                    <p className={styles.description}>Conheça o Mundo Bruxo</p>
-                </div>
-                <div className={styles.box}>
-                    <img src="/images/hogwarts.png" alt="Escudo de Hogwarts"  className={styles.icon}/>
-                    <p className={styles.description}>Descrubra sua casa de Hogwarts</p>
-                </div>
-                <div className={styles.box}>
-                    <img src="/images/patronus.png" alt="Patrono"  className={styles.icon}/>
-                    <p className={styles.description}>Descubra seu Patrono</p>
-                </div>
+                <Link href="https://www.harrypotter.com/pt" target="_blank" rel="noopener noreferrer">
+                    <div className={styles.box}>
+                        <img src="/images/wizardingWorld.png" alt="Mundo Bruxo" className={styles.icon} />
+                        <p className={styles.description}>Conheça o Mundo Bruxo</p>
+                    </div>
+                </Link>
+                <Link href="https://www.harrypotter.com/pt/sorting-hat" target="_blank" rel="noopener noreferrer">
+                    <div className={styles.box}>
+                        <img src="/images/hogwarts.png" alt="Escudo de Hogwarts" className={styles.icon} />
+                        <p className={styles.description}>Descrubra sua casa de Hogwarts</p>
+                    </div>
+                </Link>
+                <Link href="https://www.harrypotter.com/pt/patronus" target="_blank" rel="noopener noreferrer">
+                    <div className={styles.box}>
+                        <img src="/images/patronus.png" alt="Patrono" className={styles.icon} />
+                        <p className={styles.description}>Descubra seu Patrono</p>
+                    </div>
+                </Link>
             </div>
+            <footer className={styles.footer}>
+                <div className={styles.footerLinks}>
+                    <a href="https://github.com/brunasavelli" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/brunasavelli/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">LinkedIn</a>
+                    <a href="mailto:bruna.savelli@aluno.senai.br" className="hover:text-pink-400 transition-colors">E-mail</a>
+                </div>
+                <div className={styles.footerText}>
+                    <span>© {new Date().getFullYear()} Projeto Harry Potter API — Desenvolvido por Bruna Savelli</span><br />
+                    <span className={styles.footerSmall}>Este site não é oficial e não possui vínculo com a Warner Bros. ou J.K. Rowling.</span>
+                </div>
+            </footer>
         </div>
     );
 }
