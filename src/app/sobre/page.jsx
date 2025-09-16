@@ -12,39 +12,27 @@ export default function Sobre() {
                 <img src="/images/hpTitle.png" alt="Título de Harry Potter" className={styles.hpImageTitle} />
             </div>
             <div className={styles.textContainer}>
-                <h3>Essa API armazena dados dos personagens de Harry Potter, permitindo acessar informações detalhadas sobre bruxos, bruxas e outros personagens do universo criado por J.K. Rowling.</h3>
+                <h3>Essa API armazena e organiza dados dos personagens de Harry Potter, oferecendo acesso a informações detalhadas sobre bruxos, bruxas, criaturas mágicas e demais figuras do universo criado por J.K. Rowling. Com ela, é possível consultar desde dados básicos, como nomes e casas de Hogwarts, até características específicas, como varinhas, patronos, habilidades mágicas e participações em momentos marcantes da saga. Assim, a API serve como uma fonte prática e estruturada para desenvolvedores, pesquisadores ou fãs que desejam explorar com profundidade o mundo bruxo de forma integrada em suas aplicações.</h3>
             </div>
-            <div className={styles.main}>
-                <div className={styles.trioImage}>
-                    <img src="/images/trioDeOuro.png" alt="" />
-                </div>
+            <div className={styles.mainTop}>
                 <div className={styles.trioDescription}>
-                    <p>O Trio de Ouro — Harry, Rony e Hermione — é a prova de que a verdadeira magia está na amizade.
-                        Harry traz a coragem, Rony a lealdade e Hermione a sabedoria.
-                        Juntos, transformaram trevas em esperança e mostraram que nenhum destino é maior do que a força de três corações unidos.</p>
+                    <p><em>"A felicidade pode ser encontrada até mesmo nas horas mais sombrias, se a pessoa se lembrar de acender a luz."</em></p>
                 </div>
             </div>
-            {/* <div className={styles.container}>
-                <h2 className="text-4xl font-bold mb-6">Bem-vindo ao Projeto Harry Potter API</h2>
-                <div className={styles.content}>
-                    <p className={styles.text}>
-                        Este projeto foi desenvolvido para explorar os personagens do universo de Harry Potter.
-                        Utilizamos a API pública <a href="https://hp-api.onrender.com/" target="_blank" rel="noopener noreferrer" className="text-orange-500 underline">HP API</a> para obter informações sobre os bruxos, suas casas, patronos e muito mais.
-                    </p>
-                    <p className={styles.text}>
-                        O objetivo é proporcionar uma experiência interativa e visual para os fãs de Harry Potter, permitindo explorar os detalhes de cada personagem.
-                    </p>
-                    <p className={styles.text}>
-                        Desenvolvido com Next.js, React, e estilizado com Tailwind CSS.
-                    </p>
-                    <Link
-                        href="/api"
-                        className='bg-gradient-to-r from-yellow-600 to-red-900 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-red-900'
-                    >
-                        VEJA A API
-                    </Link>
+            <div className={styles.mainBottom}>
+                <div className={styles.box}>
+                    <img src="/images/wizardingWorld.png" alt="Mundo Bruxo"  className={styles.icon}/>
+                    <p className={styles.description}>Conheça o Mundo Bruxo</p>
                 </div>
-            </div> */}
+                <div className={styles.box}>
+                    <img src="/images/hogwarts.png" alt="Escudo de Hogwarts"  className={styles.icon}/>
+                    <p className={styles.description}>Descrubra sua casa de Hogwarts</p>
+                </div>
+                <div className={styles.box}>
+                    <img src="/images/patronus.png" alt="Patrono"  className={styles.icon}/>
+                    <p className={styles.description}>Descubra seu Patrono</p>
+                </div>
+            </div>
         </div>
     );
 }
