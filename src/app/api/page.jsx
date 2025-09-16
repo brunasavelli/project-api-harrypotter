@@ -57,11 +57,11 @@ export default function Api() {
   };
 
   return (
-    <div className={`${styles.container} bg-[url('https://wallpapercave.com/wp/wp9021982.jpg')] bg-fixed bg-cover bg-center min-h-screen p-10 flex flex-col justify-center items-center`}>
+    <div className={`${styles.container} bg-[url('https://i.pinimg.com/736x/ef/94/95/ef949502ce5be5e2939e08215dc09588.jpg')] bg-fixed bg-cover bg-center min-h-screen p-10 flex flex-col justify-center items-center`}>
       <Header />
       <div className="max-w-4x1 mx-auto justify-center items-center mt-20">
         <h1 className={styles.hpTitle}>
-          <span className="font-wizard text-gray-700">Bruxos de Harry Potter</span>
+          <span className="font-wizard text-black">Bruxos de Harry Potter</span>
         </h1>
 
         {!isLoaded && ( 
@@ -69,7 +69,7 @@ export default function Api() {
             <button
               onClick={fetchBruxos}
               disabled={loading}
-              className="bg-gradient-to-r from-yellow-600 to-red-900 text-white px-8 py-3 rounded-lg hover:from-yellow-700 hover:to-red-950 disabled:bg-gray-400 font-semibold cursor-pointer transition-colors mb-6"
+              className="bg-gradient-to-r from-gray-600 to-blue-900 text-white px-8 py-3 rounded-lg hover:from-gray-700 hover:to-blue-950 disabled:bg-gray-400 font-semibold cursor-pointer transition-colors mb-6"
             >
               {loading ? "Carregando ... " : "Buscar Bruxos"}
             </button>
