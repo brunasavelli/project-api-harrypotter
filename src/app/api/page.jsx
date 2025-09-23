@@ -147,6 +147,15 @@ export default function Api() {
                   </Link>
                 ))}
               </div>
+              <div className="flex justify-center items-center mt-20 flex-col space-y-6">
+                <p className="text-gray-300 text-lg font-light">Sentiu falta de algum personagem?</p>
+                <Link href="/post" className="group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium px-6 py-3 rounded-lg border border-white/20 hover:border-white/40 transition-all duration-200 hover:shadow-sm">
+                  <span className="flex items-center gap-2 text-sm uppercase tracking-wide">
+                    Adicionar personagem
+                    <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
+                  </span>
+                </Link>
+              </div>
             </>
           )
         )}
