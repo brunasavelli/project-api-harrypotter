@@ -14,7 +14,7 @@ export default function Api() {
   const [bruxos, setBruxos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
+  const [pageSize, setPageSize] = useState(4);
   const [isLoaded, setIsLoaded] = useState(false); // Novo estado para controlar se os bruxos foram carregados
 
   // função para buscar todos os bruxos
@@ -61,7 +61,7 @@ export default function Api() {
       <Header />
       <div className="max-w-4x1 mx-auto justify-center items-center mt-20">
         <h1 className={styles.hpTitle}>
-          <span className="font-wizard text-black">Bruxos de Harry Potter</span>
+          <span className="font-wizard">Bruxos de Harry Potter</span>
         </h1>
 
         {!isLoaded && ( 
@@ -85,7 +85,7 @@ export default function Api() {
         ) : (
           isLoaded && (
             <>
-              <div className="flex justify-center items-center mb-6 bg-white/80 h-15 rounded-full p-4">
+              <div className="flex justify-center items-center mb-6 bg-white/50 h-20 rounded-full p-4">
                 <Pagination
                   total={bruxos.length}
                   showTotal={(total) => `Total ${total} bruxos`}
@@ -104,11 +104,11 @@ export default function Api() {
                   <Link
                     key={bruxos.id}
                     href={`/api/character/${bruxos.id}`}
-                    className="bg-white/50 rounded-1g shadow-md rounded-lg flex flex-col-reverse justify-center items-center transition-transform duration-300 hover:scale-105 active:scale-95 p-6 w-70"
+                    className="bg-white/50 rounded-lg shadow-md flex flex-col-reverse justify-center items-center transition-transform duration-300 hover:scale-105 active:scale-95 p-6 w-80"
                   >
                     <div className="w-full p-4 flex flex-col justify-center items-center">
                       {/* Informações do bruxo */}
-                      <h3 className="font-bold text-1g text-gray-800 text-2xl w-ful items-center justify-center flex">
+                      <h3 className="font-bold text-lg text-gray-800 w-full items-center justify-center flex">
                         {bruxos.name}
                       </h3>
                       <p

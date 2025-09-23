@@ -39,15 +39,14 @@
 }
 
 .logo {
-    height: 72px;
-    max-height: 80px;
+    height: 80px;
+    max-height: 90px;
     width: auto;
-        height: 56px;
-        object-fit: contain;
-        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
-        opacity: 0;
-        animation: logo-fade-in 1s 0.2s forwards;
-    }
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+    opacity: 0;
+    animation: logo-fade-in 1s 0.2s forwards;
+}
 
     .logo:hover {
         transform: scale(1.08) rotate(-2deg);
@@ -62,4 +61,5 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
+    height: 13vh;
 }
