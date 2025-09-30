@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Card, Spin, Pagination } from "antd";
 import Link from "next/link";
 import axios from "axios";
@@ -10,17 +11,34 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from './api.module.css';
 import Header from "../components/Header/page";
 
+const STORAGE_KEY = "bruxosData";
+
 export default function Api() {
   const [bruxos, setBruxos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(4);
   const [isLoaded, setIsLoaded] = useState(false); // Novo estado para controlar se os bruxos foram carregados
+  const router = useRouter();
+  const [error, setError] = useState(false);
 
   // função para buscar todos os bruxos
   const fetchBruxos = async () => {
     setLoading(true);
     try {
+      // Verifica se já existe algo salvo no sessionStorage
+      const sessionStorageData = sessionStorage.getItem(STORAGE_KEY);
+
+      // Se existir, usa o que está salvo. Se não, faz a requisição e salva no sessionStorage
+      if (sessionStorageData) {
+        setBruxos(JSON.parse(sessionStorageData));
+      } else {
+        // Se não tiver nada salvo, faz a requisição
+        const response = await axios.get("https://hp-api.onrender.com/api/characters");
+        setBruxos(response.data);
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(response.data));
+      }
+
       const response = await axios.get(
         "https://hp-api.onrender.com/api/characters"
       );
@@ -31,6 +49,9 @@ export default function Api() {
         toastId: 'success-load'
       });
     } catch (error) {
+      setError(true);
+      console.error("Erro ao buscar bruxos:", error);
+
       console.error("Erro ao buscar bruxos:", error);
       toast.error("Erro ao carregar bruxos.", {
         toastId: 'error-load'
@@ -39,6 +60,22 @@ export default function Api() {
       setLoading(false);
     }
   };
+
+   // Ir para página de detalhes
+  const fetchBruxoId = (id) => {
+    router.push(`/api/character/${id}`);
+  };
+
+  // Limpar sessionStorage, casso que queira forçar uma nova requisição
+  const limparSessionStorage = () => {
+    sessionStorage.removeItem(STORAGE_KEY);
+    setBruxos([]);
+  };
+
+  // Busca automática quando a página carrega
+  useEffect(() => {
+    fetchBruxos();
+  }, []);
 
   // Calcula quais bruxos mostrar na página atual
   const startIndex = (currentPage - 1) * pageSize;
